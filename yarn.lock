@@ -27,6 +27,29 @@
     "@aws-cdk/core" "1.178.0"
     constructs "^3.3.69"
 
+"@aws-cdk/aws-apigatewayv2-alpha@^2.47.0-alpha.0":
+  version "2.47.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-apigatewayv2-alpha/-/aws-apigatewayv2-alpha-2.47.0-alpha.0.tgz#5e3dc15dd5cb1d9bc2b198a4bd83a71218f3b1a6"
+  integrity sha512-o8oM6xZoNNXIv6W9h9ieVF8NRuHMAvXQBlGXu0v689XOqTzQqXGcfvr8R08d/iFpXboC3LubloLBg0evTS0SOw==
+
+"@aws-cdk/aws-apigatewayv2-integrations-alpha@^2.47.0-alpha.0":
+  version "2.47.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-apigatewayv2-integrations-alpha/-/aws-apigatewayv2-integrations-alpha-2.47.0-alpha.0.tgz#1d00ff40bc85bf9d515d1e5ff5d715f608819ed4"
+  integrity sha512-PvFccVpQlpkxYIs9BlZyQC4pKpQjJ3lmXTTFCkl+8Bl7OK1tHQ9wfyK/LhPdcfwoKZi1QW/xzrTbd/dqVjRv2g==
+
+"@aws-cdk/aws-apigatewayv2@^1.178.0":
+  version "1.178.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-apigatewayv2/-/aws-apigatewayv2-1.178.0.tgz#51a4141a3214edc05fe80835035996a1ca4268c5"
+  integrity sha512-9YneKe5XNYWp65cB+PUYVIcGTL0f7ByFKPriaaBeC7Qllq16VGzYtMgmd59HXYU8Q2vj3VS2Y9DgV9ooNi4zMw==
+  dependencies:
+    "@aws-cdk/aws-certificatemanager" "1.178.0"
+    "@aws-cdk/aws-cloudwatch" "1.178.0"
+    "@aws-cdk/aws-ec2" "1.178.0"
+    "@aws-cdk/aws-iam" "1.178.0"
+    "@aws-cdk/aws-s3" "1.178.0"
+    "@aws-cdk/core" "1.178.0"
+    constructs "^3.3.69"
+
 "@aws-cdk/aws-applicationautoscaling@1.178.0":
   version "1.178.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-applicationautoscaling/-/aws-applicationautoscaling-1.178.0.tgz#d43a2160853363108863f7504c9f2e06792566de"

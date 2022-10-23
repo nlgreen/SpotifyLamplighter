@@ -3,6 +3,8 @@ import * as path from 'path';
 import { BucketDeployment, Source } from 'aws-cdk-lib/aws-s3-deployment';
 import { Bucket } from 'aws-cdk-lib/aws-s3';
 import * as lambda from 'aws-cdk-lib/aws-lambda';
+import { HttpApi, CorsHttpMethod, HttpMethod } from '@aws-cdk/aws-apigatewayv2-alpha';
+import { HttpLambdaIntegration } from '@aws-cdk/aws-apigatewayv2-integrations-alpha';
 
 export class SpotifyLamplighterStack extends cdk.Stack {
     constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
@@ -24,6 +26,25 @@ export class SpotifyLamplighterStack extends cdk.Stack {
 	    code: lambda.Code.fromAsset(path.join(__dirname, '..', 'api'))
 	});
 
+	const httpApi = new HttpApi(this, 'simpleHttpApi', {
+	    corsPreflight: {
+		allowOrigins: ['*'],
+		allowMethods: [CorsHttpMethod.GET]
+	    },
+	    apiName: 'getSongTable',
+	    createDefaultStage: true
+	});
+
+	const lambdaIntegration = new HttpLambdaIntegration('APIIntegration', apiLambda);
+	httpApi.addRoutes({
+	    path: '/getSongTable',
+	    methods: [ HttpMethod.GET ],
+	    integration: lambdaIntegration
+	});
+
+	new cdk.CfnOutput(this, 'apiExport', {
+	    value: httpApi.url!
+	});
 	
 	new cdk.CfnOutput(this, 'bucketExport', {
 	    value: websiteBucket.bucketWebsiteUrl,
