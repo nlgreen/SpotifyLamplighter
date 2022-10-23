@@ -32,6 +32,11 @@
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-apigatewayv2-alpha/-/aws-apigatewayv2-alpha-2.47.0-alpha.0.tgz#5e3dc15dd5cb1d9bc2b198a4bd83a71218f3b1a6"
   integrity sha512-o8oM6xZoNNXIv6W9h9ieVF8NRuHMAvXQBlGXu0v689XOqTzQqXGcfvr8R08d/iFpXboC3LubloLBg0evTS0SOw==
 
+"@aws-cdk/aws-apigatewayv2-authorizers-alpha@^2.47.0-alpha.0":
+  version "2.47.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-apigatewayv2-authorizers-alpha/-/aws-apigatewayv2-authorizers-alpha-2.47.0-alpha.0.tgz#f9c03964298f0403e6bb0f86d5c75872d1c8f1b3"
+  integrity sha512-VXX9CsEvrfWTgv3knMJqcAcMywps1BvfqLqvqLKAi81N8N4Jn8z4brpe/v55X2iQ7i9R8hk1F/xLOFW2NAGrBg==
+
 "@aws-cdk/aws-apigatewayv2-integrations-alpha@^2.47.0-alpha.0":
   version "2.47.0-alpha.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-apigatewayv2-integrations-alpha/-/aws-apigatewayv2-integrations-alpha-2.47.0-alpha.0.tgz#1d00ff40bc85bf9d515d1e5ff5d715f608819ed4"
