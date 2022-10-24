@@ -32,7 +32,8 @@ export class SpotifyLamplighterStack extends cdk.Stack {
 	const httpApi = new HttpApi(this, 'simpleHttpApi', {
 	    corsPreflight: {
 		allowOrigins: ['*'],
-		allowMethods: [CorsHttpMethod.GET]
+		allowMethods: [CorsHttpMethod.GET],
+		allowHeaders: ['Authorization']
 	    },
 	    apiName: 'getSongTable',
 	    createDefaultStage: true
